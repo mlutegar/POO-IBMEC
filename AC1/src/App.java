@@ -1,22 +1,3 @@
-/*
- * 1. Faça um método que receba como parâmetros as três notas da disciplina (AP1, AP2 e AC) e mostre a média.
- * A média é calculada de acordo com a fórmula M = (AP1 + AP2) * 0.4 + AC * 0.2.
- * 
- * 2.Implemente um método que exiba todos os números de 150 a 200.
- * 
- * 3. Elabore um método ePrimo(int num) que retorna se um número num é primo ou não. 
- * Caso o número não seja primo, liste todos os números pelos quais ele é divisível.
- * 
- * 4. Implemente um método que receba como parâmetro um número inteiro e exiba o dia correspondente da semana (1-Domingo, 2- Segunda, etc.), 
- * se digitar outro valor deve aparecer o texto “valor inválido”.
- * 
- * 5. Elabore um método eBissexto(int ano) que receba como parâmetro um número correspondente a um determinado ano e em seguida 
- * informe se este ano é ou não bissexto. Um ano é bissexto se ele é múltiplo de quatro. 
- * No entanto anos múltiplos de 100 que não são múltiplos de 400 não são bissextos. 
- * Então 1995 não é bissexto, 2012 é bissexto, 1900 não é bissexto e 2000 é bissexto.
- * 
- */
-
 public class App {
     public static void main(String[] args) throws Exception {
         int num;
@@ -30,13 +11,13 @@ public class App {
         System.out.println();
 
         // 3. É PRIMO?
-        num = 6;
+        num = 24;
         System.out.println("\n" + num + " É PRIMO?");
         ePrimo(num);
 
         // 4. DIA DA SEMANA
         num = 4;
-        System.out.println("\n\nQUAL É O " + num + "º DIA DA SEMANA?");
+        System.out.println("\nQUAL É O " + num + "º DIA DA SEMANA?");
         diaDaSemana(num);
 
         // 5. É BISSEXTO?
@@ -47,20 +28,21 @@ public class App {
         } else{
             System.out.println("Não é um ano bissexto!");
         }
-        
-
     }
 
+    // calcularMedia: método que calcula a média a partir da seguinte fórmula: 
     public static double calcularMedia(double ap1, double ap2, double ac){
         return (ap1+ap2) * 0.4 + ac * 0.2;
     }
 
+    // escreverNumeros150A200: método que exibe os números de 150 a 200
     public static void escreverNumeros150A200() {
         for (int i = 150; i <= 200; i++) {
             System.out.print(i + " ");
         }
     }
 
+    // ePrimo: método que retorna se um número é primo ou não. caso seja, ele lista todos os números primos.
     public static void ePrimo(int num) {
         int qtdDivisores = 0;
 
@@ -77,11 +59,14 @@ public class App {
                     System.out.print(i + " ");
                 }    
             }
+            System.out.println();
+
         } else{
             System.out.println("É um número primo.");
         }
     }
 
+    // diaDaSemana: método que exibe o dia da semana correspondete a um número inteiro
     public static void diaDaSemana(int dia) {
         switch (dia) {
             case 1:
@@ -111,6 +96,7 @@ public class App {
         }
     }
 
+    // eBissexto: método que diz se um ano é bissexto ou não.
     public static boolean eBissexto(int ano) {
         if (ano % 4 == 0) {
             if ((ano % 100 == 0) && !(ano % 400 == 0)) {
