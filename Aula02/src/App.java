@@ -80,6 +80,73 @@ public class App {
         System.out.println(!false); // NOT
         System.out.println(true && false); // AND
         System.out.println(true || false); // OR
-        
+
+        // 6. Estrutura de decisão
+        // a) if-else
+        int idade = 15;
+
+        if(idade > 18){
+            System.out.println("Você é maior de idade");
+        } else if (idade < 0){
+            System.out.println("Idade invalidade");
+        } else{
+            System.out.println("Você é menor de idade");
+        }
+
+        // NÃO É BOA PRÁTICA: se tiver apenas um comando dentro do if, é possível ocultar as chaves
+        if(idade > 18)
+            System.out.println("Você é maior de idade");
+        else
+            System.out.println("Você é menor de idade");
+
+        // b) switch
+        String opcao = "a";
+
+        switch(opcao){
+            case "a":
+                System.out.println("A");
+                break; // é preciso colocar o break para não os outros cases, pois sempre que executa um case e ele executa o resto.
+            case "b":
+                System.out.println("B");
+                break;
+            case "c":
+                System.out.println("C");
+                break;
+            case "d":
+                System.out.println("D");
+                break;
+            default:
+                System.out.println("E");
+                break;
+        }
+
+        // 7. Estrutura de repetição
+        // a) for
+        for (int i = 0; i <= 5; i++){ // a variavel i apenas existe dentro do escopo do for.
+            System.out.println(i);
+        }
+
+        int i;
+        for (i = 0; i <= 5; i++){
+            System.out.println(i);
+        }
+
+        for (i = 0; i < 10; i++) {
+            if (i==3) {
+                continue; // passa a iteração
+            }
+ 
+            System.out.println(i);
+ 
+            if (i==5) {
+                break;
+            }
+        }
+
+        // b) while
+        i = 10;
+        while (i > 0) {
+            System.out.println(i--);
+        }
     }
 }
