@@ -8,4 +8,4 @@ public class App {
 // class: é uma clase
 // static: os métodos não altera os atributos da classe
 // void: não retorna nada
-// 
+// String[] args: É o parâmetro padrão do main()
