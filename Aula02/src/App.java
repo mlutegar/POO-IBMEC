@@ -68,6 +68,18 @@ public class App {
         System.out.println(x);
         System.out.println(++x); // Incremento e depois uso a variavel
 
+        // c) comparação
+        System.out.println(x == y);
+        System.out.println(x != y);
+        System.out.println(x >= y);
+        System.out.println(x <= y);
+        System.out.println(x > y);
+        System.out.println(x < y);
 
+        // d) lógicos
+        System.out.println(!false); // NOT
+        System.out.println(true && false); // AND
+        System.out.println(true || false); // OR
+        
     }
 }
