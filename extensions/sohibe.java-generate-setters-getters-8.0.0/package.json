@@ -1,0 +1,293 @@
+{
+	"name": "java-generate-setters-getters",
+	"displayName": "Java Code Generators",
+	"description": "Java Setter Getter toString Constructor hashCode equals fluent code snippets generator",
+	"version": "8.0.0",
+	"publisher": "sohibe",
+	"license": "MIT",
+	"keywords": [
+		"java",
+		"setter",
+		"getter",
+		"constructor",
+		"toString"
+	],
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sohibegit/vscode-java-code-generator"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"activationEvents": [],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.javaGenerateConstructor",
+				"title": "Generate Empty Constructor"
+			},
+			{
+				"command": "extension.javaGenerateSerialVersionUID",
+				"title": "Generate SerialVersionUID"
+			},
+			{
+				"command": "extension.javaGenerateConstructorUsingAllFinalFields",
+				"title": "Generate Constructor Using Only Final Fields"
+			},
+			{
+				"command": "extension.javaGenerateAll",
+				"title": "Generate Everything"
+			},
+			{
+				"command": "extension.javaGenerateGettersAndSetter",
+				"title": "Generate Getters And Setters"
+			},
+			{
+				"command": "extension.javaGenerateFluentSetters",
+				"title": "Generate Only Fluent Setters"
+			},
+			{
+				"command": "extension.javaGenerateUsingGui",
+				"title": "Generator GUI"
+			},
+			{
+				"command": "extension.javaGenerateHashCodeAndEquals",
+				"title": "Generate hashCode And equals"
+			},
+			{
+				"command": "extension.javaGenerateToString",
+				"title": "Generate toString"
+			},
+			{
+				"command": "extension.javaGenerateConstructorUsingFields",
+				"title": "Generate Constructor Using All Fields"
+			},
+			{
+				"command": "extension.javaGenerateLoggerDebug",
+				"title": "Generate Logger Debug of any selected text"
+			},
+			{
+				"command": "extension.javaGenerateLombok",
+				"title": "Generate Lombok @RequiredArgsConstructor and @Slf4j"
+			},
+			{
+				"command": "extension.javaGenerateLombokDataAccessorsHash",
+				"title": "Generate Lombok @Data @Accessors @EqualsAndHashCode"
+			},
+			{
+				"command": "extension.javaGenerateLombokSlf4j",
+				"title": "Generate Lombok @Slf4j"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"submenu": "generators/editor/beta",
+					"group": "YourGroup@4",
+					"when": "resourceLangId == java && includeBeta"
+				},
+				{
+					"submenu": "generators/editor/annotations",
+					"group": "YourGroup@3",
+					"when": "resourceLangId == java"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateUsingGui",
+					"group": "YourGroup@2"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateAll",
+					"group": "YourGroup@1"
+				}
+			],
+			"generators/editor/beta": [
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateLombok",
+					"group": "constructor@1"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateLombokDataAccessorsHash",
+					"group": "constructor@2"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateLombokSlf4j",
+					"group": "constructor@3"
+				}
+			],
+			"generators/editor/annotations": [
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateConstructor",
+					"group": "constructor@1"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateConstructorUsingAllFinalFields",
+					"group": "constructor@2"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateGettersAndSetter",
+					"group": "gettersetter@1"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateFluentSetters",
+					"group": "gettersetter@2"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateHashCodeAndEquals",
+					"group": "hashequal@1"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateToString",
+					"group": "tostring@1"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateConstructorUsingFields",
+					"group": "constructor@3"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateLoggerDebug",
+					"group": "debug@1"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.javaGenerateSerialVersionUID",
+					"group": "serial@1"
+				}
+			]
+		},
+		"submenus": [
+			{
+				"id": "generators/editor/annotations",
+				"label": "Java Code Generators"
+			},
+			{
+				"id": "generators/editor/beta",
+				"label": "Beta Or Experimental"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Java Code Generator Configurations",
+				"properties": {
+					"java.code.generators.includeFluentWithSettersGetters": {
+						"type": "boolean",
+						"default": false,
+						"description": "Include Fluent Setters with Java: Generate Setters and Getters"
+					},
+					"java.code.generators.fluentMethodPrefix": {
+						"type": "string",
+						"default": "",
+						"description": "Use as prefix for the fluent methods (like with...)"
+					},
+					"java.code.generators.methodOpeningBraceOnNewLine": {
+						"type": "boolean",
+						"default": false,
+						"description": "put the method's opening brace on a new line instead of the same line"
+					},
+					"java.code.generators.generateEvenIfExists": {
+						"type": "boolean",
+						"default": false,
+						"description": "generate the code even if it's alrady exists"
+					},
+					"java.code.generators.onlyIdForHashAndEquals": {
+						"type": "boolean",
+						"default": false,
+						"description": "use id only with hashCode() and equals()"
+					},
+					"java.code.generators.onlyPrimitiveForToString": {
+						"type": "boolean",
+						"default": false,
+						"description": "use String, Primitive and Primitive Wrappers only for toString()"
+					},
+					"java.code.generators.copyJsonPropertyAnnotationsFromVariablesToSettersGetters": {
+						"type": "boolean",
+						"default": false,
+						"description": "copy @JsonProperty annotation from variables to Setters and Getters."
+					},
+					"java.code.generators.includeGeneratedAnnotation": {
+						"type": "boolean",
+						"default": false,
+						"description": "include @Generated(\"sohibe.vscode\") annotation with the generated code."
+					},
+					"java.code.generators.fluentCallsNormalSetters": {
+						"type": "boolean",
+						"default": true,
+						"description": "Fluent Setters calls normal Setters"
+					},
+					"java.code.generators.includeBeta": {
+						"type": "boolean",
+						"default": false,
+						"description": "Include Beta or Experimental stuff"
+					}
+				}
+			}
+		]
+	},
+	"icon": "images/icon.png",
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "npm run compile-tests && npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^8.1.0",
+		"@types/lodash-es": "^4.17.4",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"@types/vscode": "1.42.0",
+		"@typescript-eslint/eslint-plugin": "^5.56.0",
+		"@typescript-eslint/parser": "^5.56.0",
+		"@vscode/test-electron": "^2.3.0",
+		"eslint": "^8.36.0",
+		"glob": "^8.1.0",
+		"husky": "^8.0.3",
+		"mocha": "^10.2.0",
+		"prettier": "^2.8.8",
+		"ts-loader": "^9.4.2",
+		"typescript": "^4.9.5",
+		"webpack": "^5.76.3",
+		"webpack-cli": "^5.0.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "prettier --write \"src/**/*.ts\""
+		}
+	},
+	"dependencies": {
+		"java-ast": "^0.3.0",
+		"lodash-es": "^4.17.20"
+	},
+	"__metadata": {
+		"id": "59936e46-83f8-43fc-9c97-13a21280c091",
+		"publisherId": "8e2270d0-d281-42f7-bcd8-dab1ba348428",
+		"publisherDisplayName": "Sohibe",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1691751678775,
+		"preRelease": false
+	}
+}

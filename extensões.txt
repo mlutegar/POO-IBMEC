@@ -1,4 +1,0 @@
-Java Code Generators v8.0.0
-Extension Pack For Java
-Prettier
-Language Suppoty Fot Java
