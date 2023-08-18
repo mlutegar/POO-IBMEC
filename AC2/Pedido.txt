@@ -13,29 +13,3 @@ Implemente uma interface por linha de comando, em que o programa pede um número
 Após o primeiro resultado exibido, o programa dá a opção do usuário limpar a memória e recomeçar o cálculo, ou escolher uma nova operação, para então pedir um outro número e calcular um novo resultado; ✔
 
 O programa continua nesse loop até o usuário pedir para sair (escolha uma mensagem para ser inserida pelo usuário, como sair ou x).
-
--------------
-
-Resultado: 0.0
-
-Informe um valor: 4
-
-Digite a operação desejada (soma, sub, mult, div): sub
-
-Digite um novo valor: 5
-
-Resultado: 9
-
-Deseja (1) limpar memória, (2) Inserir nova operação ou (3) sair? 2
-
-Digite um novo valor: 5
-
-Resultado:
-
------------------
-
-Calculadora
-
-Qual é o primeiro termo da operação? 2
-
-
