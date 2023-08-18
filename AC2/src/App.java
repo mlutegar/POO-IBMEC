@@ -32,24 +32,22 @@ public class App {
             System.out.println("\nRESULTADO: " + resultado);
 
             // Perguntando se o usuario pretende limpar, continuar ou parar
-            System.out.print("Pretende (1) limpar a memória, (2) inserir nova operação ou (3) sair: ");
+            System.out.print("Pretende (0) sair, (1) limpar a memória ou (2) inserir nova operação: ");
             escolha = leitor.nextInt();
 
             if (escolha == 1) {
                 System.out.println("\n--------------------\n");
                 System.out.print("Qual é o valor do número 1: ");
                 num1 = leitor.nextDouble();
-                continue;
             } else if (escolha == 2) {
                 System.out.println("\n--------------------\n");
                 num1 = resultado;
                 System.out.println("Número 1: " + num1);
-                continue;
-            } else if (escolha == 3){
-                break;
             }
         }
 
+        System.out.println("\n--------------------\n");
+        System.out.println("CALCULADORA FINALIZADA\n");
         leitor.close();
     }
 
