@@ -1,0 +1,19 @@
+FEITO:
+Implemente pelo menos três classes, detalhando seus atributos e métodos.
+O objetivo é simplificar a administração e melhorar o engajamento dos alunos por meio de uma solução tecnológica eficiente.
+Desenvolva um sistema de gestão de eventos universitários.
+O sistema deve permitir o cadastro de eventos com detalhes como nome, data, local e número máximo de participantes.
+Um painel de controle também é desejado para visualizar eventos futuros, palestrantes e disponibilidade de vagas.
+O sistema deve permitir a inscrição de alunos em eventos, inclusive com informações adicionais para eventos específicos.
+
+Aluno{
+    nome, curso
+}
+
+Evento{
+    nome, data, local, numero máximo de participantes, infoAdicional
+}
+
+PainelControle{
+    visualizarEventosFuturos, visualizarPalestrantes, visualizarDisponibilidadeDeVagas,     cadastrarEvento, inscreverAluno, adicionarInformaçãoAdicional
+}
