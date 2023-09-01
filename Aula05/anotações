@@ -1,0 +1,185 @@
+São recomendados apenas 4 niveis de classes no máximo.
+Não é possível que uma uma subclasse não possua um método de uma superclasse.
+
+O que é um classe abstrada?
+É uma classe que não pode ser instanciada, ou seja, não pode ser criado um objeto a partir dela.
+
+O que é uma classe concreta?
+É uma classe que pode ser instanciada, ou seja, pode ser criado um objeto a partir dela.
+
+Quais são as classes abstrada em um projeto?
+A classe abstrada é a classe mãe (a superclasse), ou seja, a classe que possui os atributos e métodos que serão herdados pelas classes filhas.
+
+Quais são os tipos de heranças?
+Herança simples: quando uma classe herda de apenas uma classe.
+Herança múltipla: quando uma classe herda de mais de uma classe.
+
+Me dá um exemplo de uma herança múltipla:
+O coordenador de um curso é um professor e um administrativo ao mesmo tempo. Logo, ele herda duas classes ao mesmo tempo.
+
+É recomendado usar herança múltipla?
+Não, pois pode gerar conflitos de métodos e atributos.
+
+Como eu crio uma classe de herança múltipla	em Python?
+class Coordenador(Professor, Administrativo):
+    pass
+
+O que é upcast?
+É quando uma classe filha é atribuida a uma classe mãe.
+
+O que cast?
+É quando uma classe é atribuida a outra classe.
+
+Como eu herdo uma classe em Java?
+class Coordenador extends Professor {
+    // atributos e métodos
+}
+
+Quando que eu uso public, em Java?
+Quando eu quero que o atributo ou método seja acessado por qualquer classe.
+
+O que é um downcast?
+É quando uma classe mãe é atribuida a uma classe filha.
+
+Exemplo de downcast:
+Professor p = new Coordenador();
+
+Exemplo de upcast:
+Coordenador c = new Professor();
+
+O que o @override faz?
+Ele sobrescreve um método da superclasse.
+
+Quais são os modificadores de acesso em Java?
+public: pode ser acessado por qualquer classe.
+private: só pode ser acessado pela própria classe.
+protected: só pode ser acessado pela própria classe e pelas classes filhas.
+default: só pode ser acessado pelas classes do mesmo pacote.
+
+O @override é um o que?
+É um anotação.
+
+Quais são as principais anotações em Java?
+@Override: sobrescreve um método da superclasse.
+@Deprecated: indica que o método está obsoleto.
+@SupressWarnings: suprime os avisos do compilador.
+
+Me explique e me dê um exemplo do que é polimorfismo
+Polimorfismo é quando um método pode ter várias formas, ou seja, um método pode ter vários comportamentos diferentes.
+Exemplo:
+class Professor
+public void somar(int a, int b) {
+    System.out.println(a + b);
+}
+
+class Aluno
+public void somar(int a, int b, int c) {
+    System.out.println(a + b + c);
+}
+É preciso que os métodos tenham o mesmo nome, mas que tenham parâmetros diferentes. E que seja usado por classes diferentes, mas que herdem da mesma superclasse.
+
+Polimorfismo é o mesmo que sobrecarga?
+Não, pois na sobrecarga o método tem o mesmo nome, mas os parâmetros são diferentes. E o polimorfismo o método tem o mesmo nome, mas os parâmetros são diferentes e é usado por classes diferentes, mas que herdem da mesma superclasse.
+
+O que é um método abstrato?
+É um método que não possui corpo, ou seja, não possui implementação.
+
+Como eu crio um método abstrato?
+public abstract void somar(int a, int b);
+
+O que é um método concreto?
+É um método que possui corpo, ou seja, possui implementação.
+
+Como eu crio um método concreto?
+public void somar(int a, int b) {
+    System.out.println(a + b);
+}
+
+O que é uma classe abstrata?
+É uma classe que possui pelo menos um método abstrato.
+
+Como eu crio uma classe abstrata?
+public abstract class Professor {
+    // atributos e métodos
+}
+
+O que é uma classe concreta?
+É uma classe que não possui nenhum método abstrato.
+
+Como eu crio uma classe concreta?
+public class Professor {
+    // atributos e métodos
+}
+
+O que é associação em java?
+É quando uma classe usa a outra classe.
+
+O que é associação estrutural?
+É quando uma classe possui um atributo que é uma outra classe.
+
+Exemplo de associação estrutural:
+class Professor {
+    private Endereco endereco;
+}
+
+Quais são as associação estrutural?
+Agregação: quando a classe possui um atributo que é uma outra classe, mas que a outra classe pode existir sem a classe que a possui.
+Composição: quando a classe possui um atributo que é uma outra classe, mas que a outra classe não pode existir sem a classe que a possui.
+
+Exemplo de agregação:
+class Professor {
+    private Endereco endereco;
+}
+
+Exemplo de composição:
+class Professor {
+    private Endereco endereco;
+    public Professor() {
+        this.endereco = new Endereco();
+    }
+}
+
+O que é associação comportamental?
+É quando uma classe usa a outra classe, ou seja, quando uma classe chama um método de outra classe.
+
+Qual a diferença entre interface e classe abstrata?
+A interface não possui atributos e todos os métodos são abstratos. Já a classe abstrata pode possuir atributos e métodos concretos.
+
+O que é uma interface?
+É um contrato que a classe que implementa a interface deve seguir.
+
+Como eu crio uma interface?
+public interface Professor {
+    // métodos
+}
+
+Como eu implemento uma interface?
+public class ProfessorImpl implements Professor {
+    // métodos
+}
+
+Por que começamos os arquivos java de interface com a letra I?
+Para diferenciar as interfaces das classes.
+
+E possível que uma classe extenda uma classe e implementa uma interface ao mesmo tempo?
+Sim.
+
+Qual a sintaxe para uma classe extender uma classe e implementar uma interface ao mesmo tempo?
+public class ProfessorImpl extends Pessoa implements Professor {
+    // métodos
+}
+
+Exemplo de associação comportamental:
+class Professor {
+    public void somar(saldo Saldo) {
+        saldo.somar(10);
+    }
+}
+
+Qual a diferença entre associação comportamental e estrutural?
+?
+
+
+
+
+
