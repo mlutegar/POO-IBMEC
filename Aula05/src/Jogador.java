@@ -23,5 +23,4 @@ public class Jogador extends Pessoa{
         super.movimentar(novaPosX, novaPosY);
         System.out.println("Um jogador está se movimentando");
     }
-
 }

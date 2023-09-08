@@ -8,7 +8,7 @@ public class App {
         System.out.println(j1.posX + ", " + j1.posY);
 
         p1 = new Jogador("João", "Magro", "São Paulo", "Branco", 7);
-
+        
         p1.falar();
     }
 }
