@@ -12,10 +12,10 @@ public class LivroFisico extends Livro{
 
     @Override
     public void emprestar() {
-        if (super.estado == "Reservado") {
+        if (super.estado.equals("Reservado")) {
             System.out.println("Livro físico \"" + super.nome + "\" emprestado.");
             super.estado = "Emprestado";
-        } else if (super.estado == "Emprestado"){
+        } else if (super.estado.equals("Emprestado")){
             System.out.println("Livro físico \"" + super.nome + "\" já está emprestado.");
         } else{
             System.out.println("É preciso reserva primeiro.");

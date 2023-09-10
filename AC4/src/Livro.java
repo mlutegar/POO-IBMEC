@@ -1,4 +1,4 @@
-public class Livro {
+public abstract class Livro {
     String nome;
     String autor;
     String estado;

@@ -14,14 +14,7 @@ public class Ebook extends Livro {
 
     @Override
     public void emprestar() {
-        if (super.estado == "Reservado") {
-            System.out.println("Ebook \"" + super.nome + "\" emprestado.");
-            super.estado = "Emprestado";
-        } else if (super.estado == "Emprestado"){
-            System.out.println("Ebook \"" + super.nome + "\" já está emprestado.");
-        } else{
-            System.out.println("É preciso fazer a reserva primeiro.");
-        }
+        System.out.println("Ebooks não podem ser emprestados. Apenas reservados.");
     }
 
     @Override
