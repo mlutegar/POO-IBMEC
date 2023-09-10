@@ -6,27 +6,33 @@ public class Ebook extends Livro {
         this.tipo = tipo;
     }
 
+    @Override
     public void reservar(){
-        System.out.println("Ebook \"" + this.nome + "\" reservado.");
+        System.out.println("Ebook \"" + super.nome + "\" reservado.");
         super.estado = "Reservado";
     }
 
+    @Override
     public void emprestar() {
-        if (this.estado == "Reservado") {
-            System.out.println("Ebook \"" + this.nome + "\" emprestado.");
+        if (super.estado == "Reservado") {
+            System.out.println("Ebook \"" + super.nome + "\" emprestado.");
+            super.estado = "Emprestado";
+        } else if (super.estado == "Emprestado"){
+            System.out.println("Ebook \"" + super.nome + "\" já está emprestado.");
         } else{
             System.out.println("É preciso fazer a reserva primeiro.");
-            super.estado = "Emprestado";
         }
     }
 
+    @Override
     public void cancelarReserva(){
-        System.out.println("Reserva do Ebook " + this.nome + " cancelado.");
+        System.out.println("Reserva do Ebook \"" + super.nome + "\" cancelado.");
         super.estado = "Guardado";
     }
 
+    @Override
     public void devolver(){
-        System.out.println("Ebook " + this.nome + "  devolvido.");
+        System.out.println("Ebook \"" + super.nome + "\" devolvido.");
         super.estado = "Guardado";
     }
 }

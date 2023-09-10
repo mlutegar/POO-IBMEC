@@ -1,29 +1,36 @@
 public class LivroFisico extends Livro{
+
     public LivroFisico(String nome, String autor) {
         super(nome, autor);
     }
 
+    @Override
     public void reservar(){
-        System.out.println("Livro físico " + this.nome + " reservado.");
+        System.out.println("Livro físico \"" + super.nome + "\" reservado.");
         super.estado = "Reservado";
     }
 
+    @Override
     public void emprestar() {
-        if (this.estado == "Reservado") {
-            System.out.println("Livro físico " + this.nome + " emprestado.");
+        if (super.estado == "Reservado") {
+            System.out.println("Livro físico \"" + super.nome + "\" emprestado.");
+            super.estado = "Emprestado";
+        } else if (super.estado == "Emprestado"){
+            System.out.println("Livro físico \"" + super.nome + "\" já está emprestado.");
         } else{
             System.out.println("É preciso reserva primeiro.");
-            super.estado = "Emprestado";
         }
     }
 
+    @Override
     public void cancelarReserva(){
-        System.out.println("Reserva do livro físico " + this.nome + " cancelado.");
+        System.out.println("Reserva do livro físico \"" + super.nome + "\" cancelado.");
         super.estado = "Guardado";
     }
 
+    @Override
     public void devolver(){
-        System.out.println("Livro físico " + this.nome + "  devolvido.");
+        System.out.println("Livro físico \"" + super.nome + "\" devolvido.");
         super.estado = "Guardado";
     }
 }

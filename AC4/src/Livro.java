@@ -9,27 +9,11 @@ public class Livro {
         this.estado = "Guardado";
     }
 
-    public void reservar(){
-        System.out.println("Livro " + this.nome + " reservado.");
-        this.estado = "Reservado";
-    }
+    public void reservar(){}
 
-    public void emprestar() {
-        if (this.estado == "Reservado") {
-            System.out.println("Livro " + this.nome + " emprestado.");
-        } else{
-            System.out.println("É preciso reserva primeiro.");
-            this.estado = "Emprestado";
-        }
-    }
+    public void emprestar() {}
 
-    public void cancelarReserva(){
-        System.out.println("Reserva do livro " + this.nome + " cancelado.");
-        this.estado = "Guardado";
-    }
+    public void cancelarReserva(){}
 
-    public void devolver(){
-        System.out.println("Livro " + this.nome + "  devolvido.");
-        this.estado = "Guardado";
-    }
+    public void devolver(){}
 }
