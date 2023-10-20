@@ -29,20 +29,21 @@ public class AlunoDAO {
         }
     }
 
-    public void buscarAluno(String matricula) {
+    public String buscarAluno(String matricula) {
         for (Aluno aluno : alunos) {
             if (aluno.getMatricula().equals(matricula)) {
-                System.out.println(aluno.toString());
-                break;
+                return aluno.toString();
             }
         }
+        return "null";
     }
 
-    public void listarAlunos() {
+    public String listarAlunos() {
+        String alunosTexto = "";
         for (Aluno aluno : alunos) {
-            System.out.println(aluno.toString());
-            System.out.println("--------------------------");
+            alunosTexto += aluno.toString() + "\n\n";
         }
+        return alunosTexto;
     }
 
 }
