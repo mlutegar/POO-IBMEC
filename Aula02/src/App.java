@@ -1,3 +1,11 @@
+/*
+ * Aula 02 - Tipos de dados, operadores, estruturas de decisão e repetição
+ * Curso: Programação Orientada a Objetos com Java
+ * Prof.: Victor
+ * Data: 2023-08-11
+ * Anotado por: Michel
+ */
+
 // Comentário de linha
 
 /*
@@ -55,7 +63,7 @@ public class App {
         System.out.println(x * y);
         System.out.println(x / y);
         System.out.println(x % y);
-    
+
         // b) atribuição
         x += 2; // x = x + 2
         z -= 1.5;
@@ -135,9 +143,9 @@ public class App {
             if (i==3) {
                 continue; // passa a iteração
             }
- 
+
             System.out.println(i);
- 
+
             if (i==5) {
                 break;
             }
