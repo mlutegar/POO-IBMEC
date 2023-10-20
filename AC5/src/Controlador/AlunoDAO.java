@@ -6,7 +6,8 @@ import Modelo.Aluno;
 public class AlunoDAO {
     ArrayList <Aluno> alunos = new ArrayList <Aluno> ();
 
-    public void cadastrarAluno(Aluno aluno) {
+    public void cadastrarAluno(String nome, String matricula, String curso) {
+        Aluno aluno = new Aluno(nome, matricula, curso);
         alunos.add(aluno);
     }
 
