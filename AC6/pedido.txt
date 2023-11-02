@@ -3,10 +3,10 @@ Ler a nota de aula 09 ❌
 Ler a nota de aula 10 ❌
 
 Evolua o exercício feito na AC anterior.
-- Colocar a AC antiga aqui ❌
+- Colocar a AC antiga aqui ✅
 
 Monte na classe principal do programa uma interface por linha de comando que faça o seguinte
-- Montar o menu ❌
+- Montar o menu ✅
 
 Ao iniciar o programa, carregue um arquivo de texto com dados pré-configurados de alunos, e alimente a lista de alunos
 - Criar um arquivo de texto com dados pré-configurados de alunos ❌
@@ -16,7 +16,10 @@ Ao encerrar o programa, salve a lista de alunos em um arquivo de texto (pode ser
 - Criar um sistema de salvar os dados em um arquivo de texto ❌
 
 Tenha opções para incluir, remover, editar ou listar alunos.
-- Criar um sistema de incluir, remover, editar ou listar alunos ❌
+- Criar um sistema de incluir ❌
+- Criar um sistema de remover ❌
+- Criar um sistema de editar ❌
+- Criar um sistema de listar ❌
 
 Considere sempre a matrícula como identificador único de um aluno ❌
 
