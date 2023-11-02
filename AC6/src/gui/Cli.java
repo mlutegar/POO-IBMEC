@@ -1,6 +1,6 @@
 package gui;
 
-import controlador.AlunoDAO;
+import persistencia.AlunoDAO;
 
 public class Cli {
     LeituraDado l = new LeituraDado();
@@ -84,7 +84,7 @@ public class Cli {
         matricula = l.lerStrings("Digite a matrícula do aluno: ");
         novoCurso = l.lerStrings("Digite o novo curso do aluno: ");
 
-        a.atualizarCurso(matricula, novoCurso);
+        a.editarAluno(matricula, novoCurso);
 
         System.out.println("Curso atualizado com sucesso!");
     }

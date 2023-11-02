@@ -47,4 +47,10 @@ public class Aluno {
     public int hashCode() {
         return Objects.hash(matricula, nome, curso);
     }
+
+    // toString: retorna uma string com os dados do aluno
+    @Override
+    public String toString() {
+        return this.nome + ";" + this.matricula + ";" + this.curso;
+    }
 }

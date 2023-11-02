@@ -1,4 +1,4 @@
-package arquivos;
+package util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import java.util.List;
 public class Arquivo {
 
     // ler: classe que lê um arquivo
-    public ArrayList<String> ler(String caminho) {
+    public static ArrayList<String> ler(String caminho) {
         return null;
     }
 
     // escrever: classe que escreve um arquivo
-    public void escrever(String caminho, List<String> linhas) {
+    public static void escrever(String caminho, List<String> linhas) {
         return;
     }
 
