@@ -2,17 +2,18 @@ package persistencia;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import util.Arquivo;
 import entidades.Aluno;
 
-public class AlunoDAO {
-    List<Aluno> alunos = new ArrayList <Aluno> ();
-    String caminho;
+public class AlunoDB {
+    private List<Aluno> alunos = new ArrayList<>();
+    private String caminho;
 
     // construtor: inicializa o caminho do arquivo
-    public AlunoDAO(String caminho) throws IOException { // O IOException é para o caso a operação de leitura do arquivo falhar
+    public AlunoDB(String caminho) throws IOException { // O IOException é para o caso a operação de leitura do arquivo falhar
         this.caminho = caminho;
         this.importarAlunos();
     }
@@ -24,14 +25,12 @@ public class AlunoDAO {
     }
 
     // removerAluno: remove um aluno
-    public String removerAluno(String matricula) {
+    public void removerAluno(String matricula) {
         for (Aluno aluno : this.alunos) {
             if (aluno.getMatricula().equals(matricula)) {
                 this.alunos.remove(aluno);
-                return aluno.getMatricula();
             }
         }
-        return "";
     }
 
     // editarAluno: edita um aluno
@@ -44,36 +43,25 @@ public class AlunoDAO {
     }
 
     // buscarAluno: busca um aluno
-    public Aluno buscarAluno(String matricula) {
+    public String buscarAluno(String matricula) {
         for (Aluno aluno : this.alunos) {
             if (aluno.getMatricula().equals(matricula)) {
-                return aluno;
+                return aluno.toString();
             }
         }
         return null;
     }
 
     // listarAlunos: lista todos os alunos
-    public String listarAlunos() {
-        if (this.alunos.isEmpty()) {
-            return "";
-        }
-
-        StringBuilder tabela = new StringBuilder();
-        tabela.append(String.format("\n| %-20s | %-20s | %-20s |", "Nome", "Matricula", "Curso"));
-
-        for (Aluno aluno : this.alunos) {
-            tabela.append(String.format("\n| %-20s | %-20s | %-20s |", aluno.getNome(), aluno.getMatricula(), aluno.getCurso()));
-        }
-
-        return tabela.toString();
+    public List<Aluno> listarAlunos() {
+        return Collections.unmodifiableList(this.alunos);
     }
 
     // exortarAlunos: exporta os alunos para um arquivo (salva)
     public void exportarAlunos() throws IOException{
         List<String> linhas = new ArrayList<String>();
 
-        for (Aluno aluno : this.alunos) {
+        for (Aluno aluno : this.listarAlunos()) {
             linhas.add(aluno.toString());
         }
 
@@ -92,7 +80,7 @@ public class AlunoDAO {
 
     public String toString(){
         StringBuilder msg = new StringBuilder();
-        for (Aluno aluno : this.alunos) {
+        for (Aluno aluno : this.listarAlunos()) {
             msg.append(aluno).append("\n");
         }
         return msg.toString();
