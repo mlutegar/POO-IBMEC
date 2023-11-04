@@ -59,7 +59,7 @@ public class AlunoDB {
 
     // exortarAlunos: exporta os alunos para um arquivo (salva)
     public void exportarAlunos() throws IOException{
-        List<String> linhas = new ArrayList<String>();
+        List<String> linhas = new ArrayList<>();
 
         for (Aluno aluno : this.listarAlunos()) {
             linhas.add(aluno.toString());

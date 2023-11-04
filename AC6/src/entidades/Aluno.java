@@ -17,21 +17,6 @@ public class Aluno {
         return this.matricula;
     }
 
-    // getNome: retorna o nome do aluno
-    public String getNome() {
-        return this.nome;
-    }
-
-    // getCurso: retorna o curso do aluno
-    public String getCurso() {
-        return this.curso;
-    }
-
-    // setCurso: atualiza o curso do aluno
-    public void setCurso(String curso) {
-        this.curso = curso;
-    }
-
     // equals: verifica se o objeto é um aluno e se a matrícula é igual
     @Override
     public boolean equals(Object obj) {

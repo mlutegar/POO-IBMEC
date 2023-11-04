@@ -1,5 +1,5 @@
 Ler as notas.
-Ler a nota de aula 09 ❌
+Ler a nota de aula 09 ✅
 Ler a nota de aula 10 ❌
 
 Evolua o exercício feito na AC anterior.
@@ -9,28 +9,28 @@ Monte na classe principal do programa uma interface por linha de comando que fa�
 - Montar o menu ✅
 
 Ao iniciar o programa, carregue um arquivo de texto com dados pré-configurados de alunos, e alimente a lista de alunos
-- Criar um arquivo de texto com dados pré-configurados de alunos ❌
-- Carregar um arquivo de texto com dados pré-configurados de alunos que alimente a lista de alunos ❌
+- Criar um arquivo de texto com dados pré-configurados de alunos ✅
+- Carregar um arquivo de texto com dados pré-configurados de alunos que alimente a lista de alunos ✅
 
 Ao encerrar o programa, salve a lista de alunos em um arquivo de texto (pode ser o mesmo arquivo);
-- Criar um sistema de salvar os dados em um arquivo de texto ❌
+- Criar um sistema de salvar os dados em um arquivo de texto ✅
 
 Tenha opções para incluir, remover, editar ou listar alunos.
-- Criar um sistema de incluir ❌
-- Criar um sistema de remover ❌
-- Criar um sistema de editar ❌
-- Criar um sistema de listar ❌
+- Criar um sistema de incluir ✅
+- Criar um sistema de remover ✅
+- Criar um sistema de editar ✅
+- Criar um sistema de listar ✅
 
-Considere sempre a matrícula como identificador único de um aluno ❌
+Considere sempre a matrícula como identificador único de um aluno ✅
 
-Mantenha as classes organizadas em pacotes adequados ❌
+Mantenha as classes organizadas em pacotes adequados ✅
 
 Utilize o StringBuilder para compor dados do tipo String sempre que necessário.
 - Entender o que é StringBuilder ❌
 - Utilizar o StringBuilder ❌
 
 Utilize os métodos equals e toString, de forma a manter a interface com o usuário (scans e prints) fora das classes de entidades ou das classes DAO.
-- Separar as classes de entidades ou das classes DAO ❌
+- Separar as classes de entidades ou das classes DAO ✅
 - Utilizar os métodos equals e toString ❌
 
 Esta atividade pode ser feita em dupla ou individualmente.

@@ -10,11 +10,6 @@ public class LeituraDado {
         this.scanner = new Scanner(System.in);
     }
 
-    // lerStrings: lê uma string do teclado
-    public String lerStrings(){
-        return this.scanner.nextLine();
-    }
-
     // lerStrings: lê uma string do teclado com uma mensagem
     public String lerStrings(String msg){
         System.out.print(msg);
@@ -27,18 +22,5 @@ public class LeituraDado {
         int num = this.scanner.nextInt();
         this.scanner.nextLine();
         return num;
-    }
-
-    // lerDouble: lê um double do teclado com uma mensagem
-    public double lerDouble(String msg){
-        System.out.print(msg);
-        double num = this.scanner.nextDouble();
-        this.scanner.nextLine();
-        return num;
-    }
-
-    // aguardar: aguarda o usuário pressionar enter
-    public void aguardar(){
-        this.scanner.nextLine();
     }
 }

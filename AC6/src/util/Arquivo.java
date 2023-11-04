@@ -22,7 +22,7 @@ public class Arquivo {
         buffRead = new BufferedReader(new FileReader(caminho));
         while (true) {
             if (linha != null) {
-                if (!linha.equals("")) {
+                if (!linha.isEmpty()) {
                     linhas.add(linha);
                 }
             } else {
@@ -41,7 +41,7 @@ public class Arquivo {
         BufferedWriter buffWrite = new BufferedWriter(new FileWriter(caminho));
 
         for (String linha : linhas) {
-            buffWrite.append(linha + "\n");
+            buffWrite.append(linha).append("\n");
         }
 
         buffWrite.close();
