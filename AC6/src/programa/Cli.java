@@ -9,11 +9,13 @@ public class Cli {
     LeituraDado l;
     AlunoDB db;
 
+    // Construtor: inicializa o caminho do arquivo
     public Cli(String caminho) throws IOException {
         this.l = new LeituraDado();
         this.db = new AlunoDB(caminho);
     }
 
+    // exibirOpcoes: exibe as opções do menu
     public void exibirOpcoes() {
         System.out.println("\n| MENU |");
         System.out.println("1 - Incluir aluno");
@@ -24,6 +26,7 @@ public class Cli {
         System.out.println("6 - Sair");
     }
 
+    // escolherOpcoes: escolhe uma opção do menu
     public int escolherOpcoes() throws IOException{
         int opcao = l.lerInt("Digite a opção desejada: ");
 
@@ -61,6 +64,7 @@ public class Cli {
         return opcao;
     }
 
+    // incluirAluno: inclui um aluno
     public void incluirAluno() {
         String nome;
         String matricula;
@@ -77,6 +81,7 @@ public class Cli {
         System.out.println("Aluno cadastrado com sucesso!");
     }
 
+    // removerAluno: remove um aluno
     public void removerAluno() {
         String matricula;
 
@@ -90,6 +95,7 @@ public class Cli {
         System.out.println("Aluno removido com sucesso!");
     }
 
+    // editarAluno: edita um aluno
     public void editarAluno() {
         String novoNome;
         String matricula;
@@ -109,6 +115,7 @@ public class Cli {
         System.out.println("Aluno editado com sucesso!");
     }
 
+    // buscarAluno: busca um aluno
     public void buscarAluno() {
         String matricula;
 
@@ -122,6 +129,7 @@ public class Cli {
         System.out.println(db.buscarAluno(matricula));
     }
 
+    // listarAlunos: lista todos os alunos
     public void listarAlunos() {
         if (db.listarAlunos().isEmpty()) {
             System.out.println("Não há alunos cadastrados!");

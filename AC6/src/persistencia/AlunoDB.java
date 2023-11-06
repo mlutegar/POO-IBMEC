@@ -78,6 +78,7 @@ public class AlunoDB {
         }
     }
 
+    // toString: retorna uma string com os dados dos alunos
     public String toString(){
         StringBuilder msg = new StringBuilder();
         for (Aluno aluno : this.listarAlunos()) {
